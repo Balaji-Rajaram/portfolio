@@ -1,0 +1,54 @@
+{
+    "project":[
+        {
+            "title":"CRUD API Builder",
+            "description":"A CRUD API builder enables easy API creation via a user interface, allowing configuration without coding, and automatically generates backend code for seamless integration.",
+            "techUsed":["NodeJS","ExpressJS","HTML","CSS","Javascript","MongoDB"]
+        },
+        {
+            "title":"Web3 JS with Metamask",
+            "description":"The project guides users on integrating Ethereum functionality into web apps via Web3.js and MetaMask with clear instructions.",
+            "techUsed":["Web3 JS","HTML","CSS","Javascript"]
+        },
+        {
+            "title":"Cloud IT",
+            "description":"CloudIt simplifies app deployment with a one-click solution. Users select from a catalog, and the platform handles provisioning, including EC2, networking, security, and more.",
+            "techUsed":["NodeJS","HTML","CSS","AWS", "CFT"]
+        }
+    ],
+    "experience":[
+        {
+            "tag":"TCS",
+            "role":"Developer",
+            "company":"Tata Consultancy Services",
+            "duration":"Jun 2021 - Present",
+            "summary":["Developed and maintained Node.js backend for high-performance computing tasks.",
+            "Achieved 25% reduction in manual image sourcing time through Python automation project.",
+            "Integrated external APIs into React-based web portal, ensuring smooth operation.",
+            "Contributed to the understanding of metaverse technologies within the team, contributing to a 20% improvement in team proficiency.",
+            "Participated in generative AI projects, fostering a 25% increase in project creativity and innovation.",
+            "Contributed to a significant 30% increase in project efficiency through streamlined processes and agile methodologies."
+            ]
+        },
+        {
+            "tag":"VscaleUp",
+            "role":"Backend Developer",
+            "company":"VscaleUp",
+            "duration":"Sep 2020 - Mar 2021",
+            "summary":["Specialized in optimizing Node.js APIs for diverse applications.",
+            "Effectively oversaw a large user base, putting in place efficient onboarding procedures for more than 300k users",
+            "Leveraged aggregation pipeline optimization to enhance system performance by 30%."
+        ]
+        },
+        {
+            "tag":"TCS - Intern",
+            "role":"Developer",
+            "company":"Tata Consultancy Services",
+            "duration":"May 2020 - Aug 2020",
+            "summary":["Designed and implemented a call center portal, enabling voice calls on the website and improving user experience through seamless user detail retrieval.",
+            "Enabled voice calls directly on the website to enhance user engagement and accessibility.",
+            "Seamlessly integrated functionality to retrieve user details, resulting in a 25% improvement in overall user experience and efficiency."
+        ]
+        }
+    ]
+}
