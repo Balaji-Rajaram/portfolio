@@ -7,5 +7,5 @@ setTimeout(() => {
    document.getElementById("bodyContent").hidden = false
    document.getElementById("bodyContent").classList.add("animate-fadeIn")
 
-}, 100);
+}, 3000);
 
