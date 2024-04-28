@@ -3,17 +3,20 @@
         {
             "title":"CRUD API Builder",
             "description":"A CRUD API builder enables easy API creation via a user interface, allowing configuration without coding, and automatically generates backend code for seamless integration.",
-            "techUsed":["NodeJS","ExpressJS","HTML","CSS","Javascript","MongoDB"]
+            "techUsed":["NodeJS","ExpressJS","HTML","CSS","Javascript","MongoDB"],
+            "url":"https://github.com/Balaji-Rajaram/CRUD_Api_Builder"
         },
         {
             "title":"Web3 JS with Metamask",
             "description":"The project guides users on integrating Ethereum functionality into web apps via Web3.js and MetaMask with clear instructions.",
-            "techUsed":["Web3 JS","HTML","CSS","Javascript"]
+            "techUsed":["Web3 JS","HTML","CSS","Javascript"],
+            "url":"https://github.com/Balaji-Rajaram/web3js_with_metamask"
         },
         {
             "title":"Cloud IT",
             "description":"CloudIt simplifies app deployment with a one-click solution. Users select from a catalog, and the platform handles provisioning, including EC2, networking, security, and more.",
-            "techUsed":["NodeJS","HTML","CSS","AWS", "CFT"]
+            "techUsed":["NodeJS","HTML","CSS","AWS", "CFT"],
+            "url":"https://github.com/Balaji-Rajaram/cloud_it"
         }
     ],
     "experience":[
