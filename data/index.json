@@ -1,6 +1,18 @@
 {
     "project":[
         {
+            "title":"NodeJS Course",
+            "description":"A Node.js course exercise designed to practice building APIs from basic to advanced levels using MongoDB and JWT for authentication. The course focuses on JavaScript for server-side development.",
+            "techUsed":["NodeJS","ExpressJS","Mocha","SuperTest","Javascript","MongoDB"],
+            "url":"https://github.com/Balaji-Rajaram/nodejs_RESTFull_api_practise"
+        },
+        {
+            "title":"api-writer",
+            "description":"api-writer is a tool for quickly generating a Node.js project with MongoDB integration. It sets up a basic API server using Express.js for routing, MongoDB for data storage, and includes automatic generation of models, controllers, and routes for each module.",
+            "techUsed":["NodeJS","ExpressJS","fs"],
+            "url":"https://www.npmjs.com/package/api-writer"
+        },
+        {
             "title":"CRUD API Builder",
             "description":"A CRUD API builder enables easy API creation via a user interface, allowing configuration without coding, and automatically generates backend code for seamless integration.",
             "techUsed":["NodeJS","ExpressJS","HTML","CSS","Javascript","MongoDB"],
