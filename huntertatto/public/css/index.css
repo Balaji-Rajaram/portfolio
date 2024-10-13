@@ -1,0 +1,19 @@
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+
+  .gallery {
+    column-count: 3; /* Adjust number of columns */
+    column-gap: 0px; /* No gap between columns */
+}
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 0px; /* No gap between rows */
+}
+

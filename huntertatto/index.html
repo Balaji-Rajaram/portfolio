@@ -1,0 +1,734 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./public/css/tailwind.css"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/index.css">
+</head>
+
+<body style="font-family: Poppins, sans-serif">
+    <!-- nav bar starting -->
+
+    <nav class="bg-white shadow-md">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-20 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->         
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-20 w-auto" src="./public/img/logo.jpg" alt="Tatto Hunters PY">
+                    </div>
+
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                    <div class="flex items-center">
+                        <a href="tel:+91 99521 15215">
+                        <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                            xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape">
+                            <g>
+                                <path
+                                    d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                </path>
+                            </g>
+                        </svg>
+                    </a>
+                    </div>
+                    <div class="md:pl-5 mt-5 md:mt-0">
+
+                        <div class="flex items-center mt-3 md:mt-0">
+                            <a href="https://wa.me/9952115215">
+                            <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                style="fill: #15803d;">
+                                <g>
+                                    <path
+                                        d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- end of nav bar -->
+
+    <!--  header section  -->
+    <div class="grid md:grid-cols-2 md:mx-14 md:h-[130vh] bg-cover "
+        style="background-image: url(./public/img/bg.png);">
+        <img class="md:hidden" src="./public/img/m_1.png">
+        <div class=" h-full flex md:items-center justify-end">
+            <div class="bg-white md:w-5/6 p-10">
+                <p class="md:text-[48px]  md:leading-[58px] text-[30px] leading-[30px]">Your tattoo is <br> about <span
+                        class="font-bold">Your
+                        Life</span></p>
+                <p class="text-gray-700  mt-10">We are a team of award-winning tattoo artists here to help you get the
+                    perfect creative custom tattoo which is uniquely designed based on your ideas, values and beliefs.
+                    Hunters Tattoo is the brand people trust, we are recognised as one of the best tattoo studios in
+                    Pondicherry</p>
+                <div class="grid md:grid-cols-2 gap-1 mt-10">
+                    <div>
+                        <button class="bg-black p-4 text-white font-semibold">Schedule an Appointment</button>
+                    </div>
+                    <div class="md:pl-5 mt-5">
+                        <div class="flex items-center">
+                            <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                                xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape">
+                                <g>
+                                    <path
+                                        d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <a class=" underline pl-2" href="tel:+91 99521 15215" >Call Now</a>
+                        </div>
+                        <div class="flex items-center mt-3 md:mt-0">
+                            <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                style="fill: #15803d;">
+                                <g>
+                                    <path
+                                        d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                            <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+
+    </div>
+
+    <!-- end of header  -->
+
+    <div class="w-full h-32 bg-white"></div>
+
+    <!-- section 2  -->
+
+    <div class="md:h-[180vh] md:mx-14  bg-fixed bg-cover" style="background-image: url(./public/img/parllelx1.jpg);">
+        <div class="grid md:grid-cols-2 md:h-[120vh]  w-full">
+            <div class="flex items-center justify-end">
+
+                <div class="bg-white md:w-5/6 p-10 bg-opacity-90">
+                    <p class="md:text-[48px]  md:leading-[58px] text-[30px] leading-[30px]">Art which<br> <span
+                            class="font-bold">Connects <br>with your
+                            Heart</span></p>
+                    <p class="text-gray-700  mt-10">Step into a world where ink stories unfold across a spectrum of
+                        tattoo categories. Immerse yourself in our library of tattoo categories, themes and styles, each
+                        waiting to resonate deeply with you. Find your match, the tattoo design that speaks directly to
+                        your soul.</p>
+                    <div class="grid md:grid-cols-2 gap-1 mt-10">
+                        <div>
+                            <button class="bg-black p-4 text-white font-semibold">Explore Tatto Ctegories</button>
+                        </div>
+                        <div class="md:pl-5 mt-5 md:mt-0">
+                            <div class="flex items-center">
+                                <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                                    xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape">
+                                    <g>
+                                        <path
+                                            d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <a class=" underline pl-2" href="tel:+91 99521 15215" >Call Now</a>
+                            </div>
+                            <div class="flex items-center mt-3 md:mt-0">
+                                <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                    class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                    style="fill: #15803d;">
+                                    <g>
+                                        <path
+                                            d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                            fill-rule="evenodd"></path>
+                                    </g>
+                                </svg>
+                                <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="bg-white pt-1">
+            <div class="relative  mx-auto overflow-hidden">
+                <!-- Images Wrapper -->
+                <div id="carouselImages" class="flex transition-transform duration-500 ease-out space-x-1">
+                    <!-- Slide 1 -->
+                    <div class="flex-shrink-0 md:w-1/4 w-3/4 h-[60vh] bg-cover flex items-end justify-center "
+                        style="background-image: url(./public/img/c_6.jpeg);">
+                        <p class="text-center font-bold text-2xl text-white mb-10 ">Shiva Tattoos</p>
+                    </div>
+                    <div class="flex-shrink-0 md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                        style="background-image: url(./public/img/c_1.jpeg);">
+
+                        <p class="text-center font-bold text-2xl text-white mb-10 ">Bird Tattoos</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="flex-shrink-0 md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                        style="background-image: url(./public/img/c_2.jpeg);">
+                        <p class="text-center font-bold text-2xl text-white mb-10 ">Lotus Tattoos</p>
+                    </div>
+                    <div class="flex-shrink-0 md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                        style="background-image: url(./public/img/c_3.jpeg);">
+                        <p class="text-center font-bold text-2xl text-white mb-10 ">Butterfly Tattoos</p>
+                    </div>
+                    <div class="flex-shrink-0 md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                        style="background-image: url(./public/img/c_4.jpeg);">
+                        <p class="text-center font-bold text-2xl text-white mb-10 ">Muruga Tattoos</p>
+                    </div>
+                    <div class="flex-shrink-0 md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                        style="background-image: url(./public/img/c_5.jpeg);">
+                        <p class="text-center font-bold text-2xl text-white mb-10 ">Scorpio Tattoos</p>
+                    </div>
+
+                    <!-- Add more slides similarly -->
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button id="prev"
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full">❮</button>
+                <button id="next"
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full">❯</button>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-32 bg-white"></div>
+    <!-- stories section  -->
+    <div class="w-full flex justify-center ">
+        <div class="md:w-4/6 flex justify-center">
+            <div class="p-10">
+                <p class="md:text-[48px] text-[30px] text-center"> <span class="font-bold">Stories</span> of Hunter</p>
+                <p class="text-gray-700 text-center mt-5">
+                    We spotlight the top five stories that highlight our latest artistic achievements, community
+                    engagements, and groundbreaking collaborations. Stay connected, stay inspired, and discover the
+                    fresh stories that keeps Aliens Tattoo at the forefront of artistic exploration.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- stories currosal -->
+    <!-- <div class="w-full h-32 bg-white"></div> -->
+    <!-- <div class="md:mx-14">
+        <div class="bg-white pt-1"></div>
+        <div class="relative  mx-auto overflow-hidden">
+
+            <div id="carouselImages1" class="flex transition-transform duration-500 ease-out space-x-2">
+
+                <div class="flex-shrink-0 md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center rounded-3xl "
+                    style="background-image: url(./public/img/storie.jpg);">
+
+                    <div class="px-5  mb-10">
+                        <p class=" font-bold text-2xl text-white ">Tilak Varma's Inspiring Tatto Odyssey</p>
+                        <p class="text-white mt-3 ">Read more</p>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center rounded-3xl "
+                    style="background-image: url(./public/img/storie.jpg);">
+
+                    <div class="px-5  mb-10">
+                        <p class=" font-bold text-2xl text-white ">Tilak Varma's Inspiring Tatto Odyssey</p>
+                        <p class="text-white mt-3 ">Read more</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 md:w-1/4 w-3/4   h-[60vh] bg-cover flex items-end justify-center rounded-3xl "
+                    style="background-image: url(./public/img/storie.jpg);">
+
+                    <div class="px-5  mb-10">
+                        <p class=" font-bold text-2xl text-white ">Tilak Varma's Inspiring Tatto Odyssey</p>
+                        <p class="text-white mt-3 ">Read more</p>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 md:w-1/4 w-3/4   h-[60vh] bg-cover flex items-end justify-center rounded-3xl "
+                    style="background-image: url(./public/img/storie.jpg);">
+
+                    <div class="px-5  mb-10">
+                        <p class=" font-bold text-2xl text-white ">Tilak Varma's Inspiring Tatto Odyssey</p>
+                        <p class="text-white mt-3 ">Read more</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <button id="prev1"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full">❮</button>
+            <button id="next1"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2  bg-gray-800 text-white px-4 py-2 rounded-full">❯</button>
+        </div>
+    </div>
+    </div> -->
+
+    <div class="w-full h-32 bg-white"></div>
+
+    <div class="md:mx-14 md:h-[100vh] grid md:grid-cols-2">
+        <div class="w-full h-full flex items-center justify-center bg-cover"
+            style="background-image: url(./public/img/galaxy.jpg);">
+            <div class=" md:w-5/6 p-10">
+                <p class="text-[48px] text-white  leading-[58px]">Your tattoo is <br> about <span class="font-bold">Your
+                        Life</span></p>
+                <p class="text-white  mt-10">We are a team of award-winning tattoo artists here to help you get the
+                    perfect creative custom tattoo which is uniquely designed based on your ideas, values and beliefs.
+                    Hunters Tattoo is the brand people trust, we are recognised as one of the best tattoo studios in
+                    Puducherry</p>
+                <div class="grid md:grid-cols-2 gap-1 mt-10">
+                    <div>
+                        <button class="bg-white p-4 text-black font-semibold">Schedule an Appointment</button>
+                    </div>
+                    <div class="md:pl-5 mt-5 md:mt-0">
+                        <div class="flex items-center">
+                            <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                                xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape"
+                                style="fill: #fff;">
+                                <g>
+                                    <path
+                                        d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <a class="text-white underline pl-2" href="tel:+91 99521 15215" >Call Now</a>
+                        </div>
+                        <div class="flex items-center mt-3 md:mt-0">
+                            <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                style="fill: #36ff80;">
+                                <g>
+                                    <path
+                                        d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                            <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img class="w-full h-full" src="./public/img/tatto_collection.gif">
+        </div>
+
+    </div>
+
+    <!-- piercing  -->
+    <div class="w-full h-32 bg-white"></div>
+    <div class="md:mx-14 md:h-[100vh] grid md:grid-cols-2">
+        <div class="w-full h-full flex items-center justify-center bg-cover"
+            style="background-image: url(./public/img/img3.webp);">
+            <div class=" md:w-5/6 p-10">
+                <p class="text-[48px] text-white  leading-[58px]">Your tattoo is <br> about <span class="font-bold">Your
+                        Life</span></p>
+                <p class="text-white  mt-10">We are a team of award-winning tattoo artists here to help you get the
+                    perfect creative custom tattoo which is uniquely designed based on your ideas, values and beliefs.
+                    Hunters Tattoo is the brand people trust, we are recognised as one of the best tattoo studios in
+                    Puducherry.</p>
+                <div class="grid md:grid-cols-2 gap-1 mt-10">
+                    <div>
+                        <button class="bg-white p-4 text-black font-semibold">Schedule an Appointment</button>
+                    </div>
+                    <div class="md:pl-5 mt-5 md:mt-0">
+                        <div class="flex items-center">
+                            <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                                xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape"
+                                style="fill: #fff;">
+                                <g>
+                                    <path
+                                        d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <a class="text-white underline pl-2" href="tel:+91 99521 15215" >Call Now</a>
+                        </div>
+                        <div class="flex items-center mt-3 md:mt-0">
+                            <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                style="fill: #36ff80;">
+                                <g>
+                                    <path
+                                        d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                            <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class=" bg-cover bg-fixed bg-no-repeat w-full h-full"
+                style="background-image: url(./public/img/parllelx2.webp);"></div>
+        </div>
+    </div>
+
+    <!-- pay later -->
+    <!-- <div class="w-full h-20 bg-white"></div>
+
+    <div class="grid grid-cols-2 mx-14 h-[130vh] bg-cover bg-yellow-300" >
+        <div class=" h-full flex items-center justify-end">
+            <div class="bg-white w-5/6 p-10 bg-opacity-90">
+                <p class="text-[48px]  leading-[58px] font-bold">Tatto Now <br> Pay Later </p>
+                <p class="text-gray-700 text-[24px]  mt-10 tracking-wide">You can now choose to pay later in easy monthly instalments through our Aliens Payment Plans</p>
+                <div class="grid grid-cols-2 gap-1 mt-10">
+                    <div>
+                        <button class="bg-black p-4 text-white font-semibold">Schedule an Appointment</button>
+                    </div>
+                    <div class="pl-5">
+                        <div class="flex items-center">
+                            <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                                xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape">
+                                <g>
+                                    <path
+                                        d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <p class=" underline pl-2">Call Now</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                style="fill: #15803d;">
+                                <g>
+                                    <path
+                                        d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                            <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+
+    </div> -->
+
+    <!-- secured for life -->
+
+    <div class="w-full h-20 bg-white"></div>
+
+    <div class="grid md:grid-cols-2 md:mx-14 md:h-[130vh] grid-cols-1 col-end-1 bg-cover bg-gray-700">
+        <div class=" h-full flex items-center justify-end order-2 md:order-1">
+            <div class=" md:w-5/6 p-10">
+                <img class="h-32" src="./public/img/logo.jpg">
+                <p class="md:text-[48px] text-[30px] text-white  md:leading-[58px] font-bold mt-10">Your art is <br>
+                    secured for life,
+                    <br> thats our promise!
+                </p>
+                <p class="text-white text-[24px]  mt-10 tracking-wide">Lifetime TattooCare is on us</p>
+                <div class="grid md:grid-cols-2 gap-1 mt-10">
+                    <div>
+                        <button class="bg-transparent border p-4 text-white font-semibold">Schedule an
+                            Appointment</button>
+                    </div>
+                    <div class="md:pl-5 mt-5 md:mt-0">
+                        <div class="flex items-center">
+                            <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                                xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape"
+                                style="fill: #fff;">
+                                <g>
+                                    <path
+                                        d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <a class="text-white underline pl-2" href="tel:+91 99521 15215" >Call Now</a>
+                        </div>
+                        <div class="flex items-center mt-3 md:mt-0">
+                            <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                style="fill: #36ff80;">
+                                <g>
+                                    <path
+                                        d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                            <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-10 flex items-center order-1 md:order-2">
+            <img class="invert w-full" src="./public/img/secure.png">
+        </div>
+
+    </div>
+
+
+    <!-- master of ink -->
+    <div class="w-full h-20 bg-white"></div>
+    <div class="grid md:grid-cols-2 md:mx-14 md:h-[130vh] bg-cover "
+        style="background-image: url(./public/img/masterink.png);">
+        <img class="md:hidden" src="./public/img/masterink.png" alt="">
+        <div class=" h-full flex items-center justify-end">
+            <div class="bg-white bg-opacity-90 md:w-5/6 p-10">
+                <p class="md:text-[48px]  md:leading-[58px]  mt-10 text-[30px] leading-[30px]">Master of <span
+                        class="font-bold">Ink</span> </p>
+                <p class=" md:text-[24px] text-[20px] mt-5  tracking-wide">Not just Artists, but storytellers</p>
+                <p class="text-gray-700 mt-10">At the heart of Aliens Tattoo, our world-class artists are maestros of
+                    ink who create award-winning art that speaks volumes. Being renowned storytellers, our creativity
+                    and skills are unmatched, making us leaders in the tattoo industry.</p>
+                <div class="grid md:grid-cols-2 gap-1 mt-10">
+                    <div>
+                        <button class="bg-black p-4 text-white font-semibold">Schedule an Appointment</button>
+                    </div>
+                    <div class="md:pl-5 mt-5 md:mt-0">
+                        <div class="flex items-center">
+                            <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                                xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape">
+                                <g>
+                                    <path
+                                        d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                                    </path>
+                                </g>
+                            </svg>
+                            <a class=" underline pl-2" href="tel:+91 99521 15215" >Call Now</a>
+                        </div>
+                        <div class="flex items-center mt-3 md:mt-0">
+                            <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                                class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                                style="fill: #15803d;">
+                                <g>
+                                    <path
+                                        d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                        fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                            <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+
+    </div>
+    <div class="bg-white pt-1 md:mx-14">
+        <div class="relative  mx-auto overflow-y-scroll md:overflow-hidden">
+            <!-- Images Wrapper -->
+            <div id="carouselImages3" class="flex transition-transform duration-500 ease-out space-x-1">
+                <!-- Slide 1 -->
+                <div class="flex-shrink-0 md:w-1/4 w-3/4 h-[60vh] bg-cover flex items-end justify-center "
+                    style="background-image: url(./public/img/m_1.png);">
+
+
+                </div>
+                <!-- Slide 2 -->
+                <div class="flex-shrink-0  md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                    style="background-image: url(./public/img/m_2.png);">
+                </div>
+                <div class="flex-shrink-0  md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                    style="background-image: url(./public/img/m_3.png);">
+
+                </div>
+                <div class="flex-shrink-0  md:w-1/4 w-3/4  h-[60vh] bg-cover flex items-end justify-center "
+                    style="background-image: url(./public/img/m_4.png);">
+
+                </div>
+
+                <!-- Add more slides similarly -->
+            </div>
+
+            <!-- Navigation Buttons -->
+
+        </div>
+    </div>
+
+    <div class="w-full h-20 bg-white">
+
+    </div>
+    <div>
+        <p class="md:text-[48px] text-[30px] text-center">The Hunters <span class="font-bold">Gallery</span>
+    </div>
+
+    <div class="md:mx-14 h-[100vh] overflow-x-scroll no-scrollbar">
+        <div id="gallery" class="grid grid-cols-2 md:grid-cols-3 gap-2 p-4 ">
+            <!-- Images will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- hunters everywhere -->
+    <div class="w-full h-20 bg-white"></div>
+    <div class="w-full flex justify-center ">
+        <div class="md:w-4/6 flex justify-center">
+            <div class="p-10">
+                <p class="md:text-[48px] text-[30px] text-center"> Hunters are <span class="font-bold">Everywhere</span>
+                </p>
+                <p class="text-gray-700 text-center mt-5">
+                    Tatto Hunters PY ensures world-class artistry is always within your reach, demonstrating our
+                    commitment to you by bringing our tattoo studios closer to your world. Choose the nearest location
+                    and embrace the exceptional care and creativity waiting just around the corner.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Address -->
+    <div class="md:mx-14 grid md:grid-cols-4 gap-4 p-5 md:p-0">
+        <div class="p-10 border rounded-md">
+            <p class="text-[30px] font-bold">Tatto Hunters PY</p>
+            <p class="text-[30px] font-bold">Muthialpet</p>
+            <p class="text-[30px] mt-5">- </p>
+            <p>
+                No.521, M.G.Road, Opp to Shenbaga hotel, Muthialpet, Puducherry <br> Contact: 97900 22335
+            </p>
+        </div>
+        <div class="p-10 border rounded-md">
+            <p class="text-[30px] font-bold">Tatto Hunters PY</p>
+            <p class="text-[30px] font-bold">Saint Ange St</p>
+            <p class="text-[30px] mt-5">- </p>
+            <p>
+                No.06, Saint Ange St, Nearby Geetha bakery, (Opp to Axis Bank), Puducherry <br>
+                Contact: 99408 09022
+            </p>
+        </div>
+        <div class="p-10 border rounded-md">
+            <p class="text-[30px] font-bold">Tatto Hunters PY</p>
+            <p class="text-[30px] font-bold">Bussy St</p>
+            <p class="text-[30px] mt-5">- </p>
+            <p>
+                No.119, Bussy St. Citi Union Bank Downstairs Puducherry <br>
+                Contact: 91503 33151
+            </p>
+        </div>
+        <div class="p-10 border rounded-md">
+            <p class="text-[30px] font-bold">Tatto Hunters PY</p>
+            <p class="text-[30px] font-bold">Orleanpet</p>
+            <p class="text-[30px] mt-5">- </p>
+            <p>
+                No.77, Opp to New Bus stand, (Opp to Hotel Mass) Next to ICICI Atm, Orleanpet, Puducherry <br>
+                Contact : 95664 94545
+            </p>
+        </div>
+        <div class="p-10 border rounded-md">
+            <p class="text-[30px] font-bold">Tatto Hunters PY</p>
+            <p class="text-[30px] font-bold">Mission Street</p>
+            <p class="text-[30px] mt-5">- </p>
+            <p>
+                No.177, First Floor, Mission Street, Next to Levi's showroom, Pondicherry <br>
+                Contact: 99521 15215
+            </p>
+        </div>
+        <div class="p-10 border rounded-md">
+            <p class="text-[30px] font-bold">Tatto Hunters PY</p>
+            <p class="text-[30px] font-bold">Villupuram</p>
+            <p class="text-[30px] mt-5">- </p>
+            <p>
+                No.808, First Floor, Nearby Signal, Opp to Traffic Police Station, Villupuram <br>
+                Contact: 99945 85850
+            </p>
+        </div>
+    </div>
+
+
+    <!-- end of address  -->
+    <div class="w-full h-20 bg-white"></div>
+
+    <!-- Footer -->
+
+    <div class="bg-gray-100 flex grid md:grid-cols-2 p-14">
+        <div class=" md:p-10 order-2 md:order-1">
+
+            <p class="mt-10 text-gray-700 "> Hunters Tatto PY is a premium tattoo studio with more than 5
+                outlets across
+                Puducherry.</p>
+            <div class="mt-5">
+                <div class="flex items-center">
+                    <svg data-bbox="0.539 0 512.562 513.641" viewBox="0 0 513.64 513.64"
+                        xmlns="http://www.w3.org/2000/svg" height="20" width="32" data-type="shape">
+                        <g>
+                            <path
+                                d="m499.66 376.96-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z">
+                            </path>
+                        </g>
+                    </svg>
+                    <a class=" underline pl-2" href="tel:+91 99521 15215" >Call Now</a>
+                </div>
+
+            </div>
+            <div>
+                <div class="flex items-center mt-3">
+                    <svg data-bbox="33 33 133.333 133.333" viewBox="0 0 200 200" height="32" width="32"
+                        class="text-green-700" xmlns="http://www.w3.org/2000/svg" data-type="shape"
+                        style="fill: #15803d;">
+                        <g>
+                            <path
+                                d="M130.212 112.901c-1.658-.826-9.814-4.82-11.334-5.371-1.521-.551-2.627-.826-3.733.826-1.105 1.652-4.284 5.371-5.252 6.473-.968 1.101-1.935 1.24-3.594.413-1.659-.826-7.004-2.569-13.34-8.194-4.931-4.377-8.26-9.783-9.228-11.436-.967-1.653-.103-2.546.728-3.37.746-.74 1.659-1.928 2.488-2.892.83-.963 1.106-1.652 1.659-2.753.553-1.103.276-2.067-.139-2.893-.414-.826-3.732-8.952-5.114-12.258-1.347-3.218-2.714-2.782-3.732-2.834a66.765 66.765 0 0 0-3.18-.058c-1.105 0-2.903.413-4.423 2.066-1.52 1.653-5.806 5.647-5.806 13.772 0 8.126 5.944 15.976 6.774 17.078.829 1.102 11.697 17.776 28.337 24.927 3.958 1.701 7.048 2.717 9.456 3.478 3.974 1.257 7.59 1.079 10.448.654 3.187-.474 9.815-3.993 11.197-7.849 1.382-3.857 1.382-7.162.967-7.851-.414-.689-1.52-1.102-3.179-1.928Zm-30.266 41.128h-.023c-9.9-.004-19.612-2.651-28.084-7.654l-2.015-1.191-20.884 5.453 5.574-20.265-1.312-2.078a54.59 54.59 0 0 1-8.436-29.224c.012-30.278 24.765-54.911 55.202-54.911 14.738.005 28.592 5.725 39.01 16.105s16.152 24.177 16.147 38.85c-.013 30.28-24.766 54.915-55.18 54.915Zm46.961-101.653C134.373 39.888 117.704 33.007 99.945 33 63.353 33 33.57 62.637 33.556 99.065a65.711 65.711 0 0 0 8.862 33.031L33 166.333l35.193-9.188a66.57 66.57 0 0 0 31.725 8.042h.027c36.589 0 66.374-29.64 66.388-66.069.007-17.654-6.892-34.254-19.426-46.742Z"
+                                fill-rule="evenodd"></path>
+                        </g>
+                    </svg>
+                    <a class="text-green-700 underline pl-2 " href="https://wa.me/9952115215">Whatsapp now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end md:p-10 md:order-2">
+            <img class=" h-[200px] w-auto" src="./public/img/logo.jpg" alt="Tatto Hunters PY">
+
+        </div>
+
+    </div>
+
+
+</body>
+<script src="./public/js/index.js"></script>
+<script src="./public/js/gallery.js"></script>
+
+
+</html>
